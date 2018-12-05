@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:background="#60000000"
+    >
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:id="@+id/sign_action_layout"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        >
+
+        <com.aisino.trusthandwrite.custom.SignaturePad
+            android:layout_width="match_parent"
+            android:layout_height="280dp"
+            android:background="@android:color/background_light"
+            android:id="@+id/signature_pad"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentLeft="true"
+            android:layout_alignWithParentIfMissing="false"
+            android:layout_centerHorizontal="true" />
+
+        <ImageView
+            android:id="@+id/line"
+            android:layout_below="@id/signature_pad"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="0dp"
+            android:src="@drawable/login1_003"
+            />
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="88dp"
+            android:orientation="horizontal"
+            android:layout_below="@id/line"
+            >
+
+            <Button
+                android:layout_weight="1"
+                android:layout_width="match_parent"
+                android:layout_height="fill_parent"
+                android:layout_alignParentLeft="true"
+                android:text="返回"
+                android:textStyle="bold"
+                android:textColor="#1E90FF"
+                android:textSize="20dp"
+                android:id="@+id/btn_sign_cancel"
+                android:background="@drawable/login1_002"
+                />
+            <TextView
+                android:id="@+id/center1"
+                android:layout_width="0dip"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                />
+            <Button
+                android:layout_weight="1"
+                android:layout_width="match_parent"
+                android:layout_height="fill_parent"
+                android:layout_alignParentRight="true"
+                android:text="确定"
+                android:textStyle="bold"
+                android:textColor="@android:color/white"
+                android:textSize="20dp"
+                android:id="@+id/btn_sign_save"
+                android:background="@drawable/login1_008"
+                />
+        </LinearLayout>
+
+        <ImageButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/main8_001"
+            android:id="@+id/btn_sign_clean"
+            android:paddingLeft="10dp"
+            android:paddingBottom="10dp"
+            android:paddingTop="10dp"
+            android:background="@android:color/transparent"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentEnd="true"
+            android:layout_marginRight="24dp" />
+    </RelativeLayout>
+</RelativeLayout>
+

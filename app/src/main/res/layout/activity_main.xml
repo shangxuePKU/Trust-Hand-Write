@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="#eee">
+
+    <RelativeLayout
+        android:id="@+id/title"
+        android:layout_width="match_parent"
+        android:layout_height="88dp"
+        android:gravity="center_vertical" >
+
+        <ImageView
+            android:id="@+id/tittle_image"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/main1_001" />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/eye"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/title"
+        android:padding="5dp"
+        android:gravity="center_vertical"  >
+
+        <ImageButton
+            android:id="@+id/set_btn"
+            android:layout_margin="5dp"
+            android:onClick="toSetBtnClick"
+            android:layout_toLeftOf="@+id/center1"
+            android:adjustViewBounds="true"
+            android:scaleType="fitXY"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:src="@drawable/main1_002"
+            android:background="@android:color/transparent"
+            />
+
+        <TextView
+            android:id="@+id/center1"
+            android:layout_width="0dip"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"  />
+
+        <ImageButton
+            android:id="@+id/sign_btn"
+            android:layout_margin="5dp"
+            android:onClick="toModelListBtnClick"
+            android:layout_toRightOf="@+id/set_btn"
+            android:adjustViewBounds="true"
+            android:scaleType="fitXY"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:src="@drawable/main1_003"
+            android:background="@android:color/transparent"
+            />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/mouth"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="5dp"
+        android:layout_below="@id/eye"
+        android:gravity="center_vertical"  >
+
+        <ImageButton
+            android:id="@+id/record_btn"
+            android:layout_margin="5dp"
+            android:onClick="toRecordBtnClick"
+            android:layout_toLeftOf="@+id/center2"
+            android:adjustViewBounds="true"
+            android:scaleType="fitEnd"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:src="@drawable/main1_004"
+            android:background="@android:color/transparent"
+            />
+
+        <TextView
+            android:id="@+id/center2"
+            android:layout_width="0dip"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"  />
+
+        <ImageButton
+            android:id="@+id/personal_btn"
+            android:layout_margin="5dp"
+            android:onClick="toPersonalBtnClick"
+            android:layout_toRightOf="@+id/record_btn"
+            android:adjustViewBounds="true"
+            android:scaleType="fitStart"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:src="@drawable/main1_005"
+            android:background="@android:color/transparent"
+            />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/nose"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/eye"
+        android:layout_above="@+id/mouth"
+        android:padding="5dp"
+        android:layout_marginTop="-100dp"
+        android:layout_marginBottom="-100dp"
+        android:gravity="center_vertical"  >
+
+        <ImageButton
+            android:id="@+id/adding_btn"
+            android:onClick="toAddBtnClick"
+            android:adjustViewBounds="true"
+            android:scaleType="fitCenter"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/main1_006"
+            android:background="@layout/shape_roundedbutton"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true" />
+
+    </RelativeLayout>
+
+    <com.aisino.trusthandwrite.custom.BottomMenuView
+        android:id="@+id/main_bottom_bm"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true">
+    </com.aisino.trusthandwrite.custom.BottomMenuView>
+
+</RelativeLayout>

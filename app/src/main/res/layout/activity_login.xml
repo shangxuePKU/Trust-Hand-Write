@@ -1,0 +1,183 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@color/gainsboro"
+    android:gravity="center_horizontal">
+
+    <!-- 导航头-->
+    <com.aisino.trusthandwrite.custom.TopNavigationView
+        android:id="@+id/login_navigation"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true">
+    </com.aisino.trusthandwrite.custom.TopNavigationView>
+
+    <!-- 输入区域白色背景-->
+    <RelativeLayout
+        android:id="@+id/login_center_layout"
+        android:layout_below="@id/login_navigation"
+        android:layout_width="fill_parent"
+        android:layout_height="182dp"
+        android:background="@drawable/login1_background"
+        android:layout_marginTop="15dp">
+    </RelativeLayout>
+
+
+    <RelativeLayout
+        android:layout_below="@id/login_navigation"
+        android:id="@+id/RelativeLayout_platfcode"
+        android:layout_width="wrap_content"
+        android:layout_height="60dp"
+        android:orientation="horizontal"
+        android:clickable="true"
+        android:layout_marginTop="15dp">
+        <LinearLayout
+            android:id="@+id/linearlayout_platfname"
+            android:orientation="horizontal"
+            android:paddingLeft="10dp"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <ImageView
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_margin="10dp"
+                android:src="@drawable/login1_006"
+                android:id="@+id/img_platfname"
+                android:layout_alignParentLeft="true"
+                />
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:id="@+id/login_platformName_edit"
+                android:textColor="#000"
+                android:textSize="20sp"
+                android:background="@android:color/transparent"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:hint="平台名称"/>
+        </LinearLayout>
+    </RelativeLayout>
+    <ImageView
+        android:layout_below="@+id/RelativeLayout_platfcode"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:scaleType="centerCrop"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:src="@drawable/login1_003"
+        />
+
+
+    <RelativeLayout
+        android:layout_below="@id/RelativeLayout_platfcode"
+        android:id="@+id/RelativeLayout_clientname"
+        android:layout_width="wrap_content"
+        android:layout_height="60dp"
+        android:orientation="horizontal"
+        android:clickable="true">
+
+        <LinearLayout
+            android:id="@+id/linearlayout_clientname"
+            android:orientation="horizontal"
+            android:paddingLeft="10dp"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <ImageView
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_margin="10dp"
+                android:src="@drawable/login1_004"
+                android:id="@+id/img_clientname"
+                android:layout_alignParentLeft="true" />
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:id="@+id/login_clientName_edit"
+                android:textColor="#000"
+                android:textSize="20sp"
+                android:background="@android:color/transparent"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:hint="客户端名称"/>
+
+        </LinearLayout>
+    </RelativeLayout>
+    <ImageView
+        android:layout_below="@+id/RelativeLayout_clientname"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:scaleType="centerCrop"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:src="@drawable/login1_003"
+        />
+
+    <RelativeLayout
+       android:layout_below="@+id/RelativeLayout_clientname"
+        android:id="@+id/RelativeLayout_authcode"
+        android:layout_width="wrap_content"
+        android:layout_height="60dp"
+        android:orientation="horizontal"
+        android:clickable="true">
+
+        <LinearLayout
+            android:id="@+id/login_edit_authcode_layout"
+            android:orientation="horizontal"
+            android:paddingLeft="10dp"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            >
+            <ImageView
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_margin="10dp"
+                android:src="@drawable/login1_005"
+                android:id="@+id/img_authcode"
+                android:layout_alignParentLeft="true"
+                />
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:id="@+id/login_authCode_edit"
+                android:textColor="#000"
+                android:textSize="20sp"
+                android:background="@android:color/transparent"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:password="true"
+                android:hint="授权码"/>
+        </LinearLayout>
+    </RelativeLayout>
+
+    <ImageView
+        android:layout_below="@+id/RelativeLayout_authcode"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:scaleType="centerCrop"
+        android:padding="1dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:src="@drawable/login1_003" />
+
+    <Button
+        android:id="@+id/login_login_btn"
+        android:layout_below="@+id/login_center_layout"
+        android:layout_marginTop="20dp"
+        android:layout_width="300dp"
+        android:layout_height="50dp"
+        android:text="登录"
+        android:background="@drawable/login1_008"
+        android:textColor="#ffffff"
+        android:textSize="20sp"
+        android:onClick="loginBtnClick"
+        android:layout_centerHorizontal="true"
+        />
+
+</RelativeLayout>

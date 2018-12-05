@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@drawable/login1_background"
+    android:gravity="center_horizontal">
+
+    <!-- 导航头-->
+    <com.aisino.trusthandwrite.custom.TopNavigationView
+        android:id="@+id/ct_navigation"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true">
+    </com.aisino.trusthandwrite.custom.TopNavigationView>
+
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:id="@+id/ct_title"
+        android:src="@drawable/main5_001"
+        android:paddingTop="5dp"
+        android:scaleType="fitStart"
+        android:layout_below="@+id/ct_navigation"
+        />
+
+    <ProgressBar
+        android:id="@+id/ct_pro"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="160dp"
+        />
+
+    <ListView
+        android:id="@+id/ct_lv"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="280dp"
+        android:padding="2dp"
+        android:background="@null"
+        android:layout_below="@+id/ct_title"
+        android:listSelector="@android:color/transparent"
+        android:choiceMode="singleChoice"
+        android:layout_above="@+id/ct_nextBtn">
+    </ListView>
+
+    <Button
+        android:layout_margin="20dp"
+        android:layout_width="200dp"
+        android:layout_height="50dp"
+        android:id="@+id/ct_nextBtn"
+        android:onClick="nextBtnClick"
+        android:text="下一步"
+        android:textSize="20sp"
+        android:textColor="@android:color/white"
+        android:background="#10000000"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true" />
+</RelativeLayout>

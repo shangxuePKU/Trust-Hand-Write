@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:id="@+id/relativelayout_001"
+    android:background="#eee" >
+
+    <!-- 导航头-->
+    <com.aisino.trusthandwrite.custom.TopNavigationView
+        android:id="@+id/record_navigation"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true">
+    </com.aisino.trusthandwrite.custom.TopNavigationView>
+
+    <com.aisino.trusthandwrite.custom.RefreshableView
+        android:id="@+id/refreshable_view"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_below="@+id/record_navigation"
+        android:layout_above="@+id/record_bottom_bm">
+
+        <com.aisino.trusthandwrite.custom.PulmListView
+            android:id="@+id/recordlist"
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@null"
+            android:listSelector="@android:color/transparent"
+            android:choiceMode="singleChoice"
+            android:scrollbars="none"
+            android:layout_marginBottom="2dp">
+        </com.aisino.trusthandwrite.custom.PulmListView>
+
+    </com.aisino.trusthandwrite.custom.RefreshableView>
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:scaleType="centerCrop"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_above="@+id/record_bottom_bm"
+        android:src="@drawable/login1_003"
+        android:id="@+id/imageView2" />
+
+    <com.aisino.trusthandwrite.custom.BottomMenuView
+        android:id="@+id/record_bottom_bm"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true">
+    </com.aisino.trusthandwrite.custom.BottomMenuView>
+</RelativeLayout>

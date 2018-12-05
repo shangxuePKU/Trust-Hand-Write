@@ -1,0 +1,216 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="#eee"
+    android:gravity="center_horizontal">
+
+    <!-- 导航头-->
+    <com.aisino.trusthandwrite.custom.TopNavigationView
+        android:id="@+id/personal_navigation"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true">
+    </com.aisino.trusthandwrite.custom.TopNavigationView>
+
+    <RelativeLayout
+        android:layout_below="@id/personal_navigation"
+        android:id="@+id/platform"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:background="@android:color/white"
+        android:layout_marginTop="15dp">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:padding="5dp"
+            android:id="@+id/img_platform"
+            android:src="@drawable/user_001"
+            android:layout_alignParentLeft="true"
+            />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_centerInParent="true"
+            android:layout_toRightOf="@id/img_platform"
+            >
+
+            <TextView
+                android:id="@+id/txt_platform1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:text="平台名称:"
+                android:padding="5dp"
+                android:textSize="20dp"
+                android:textColor="@android:color/black"
+                />
+            <TextView
+                android:id="@+id/txt_platform2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:padding="5dp"
+                android:textSize="20dp"
+                android:textColor="@android:color/black"
+                />
+
+        </LinearLayout>
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_below="@id/platform"
+        android:id="@+id/client"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:background="@android:color/white"
+        android:layout_marginTop="15dp">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:padding="5dp"
+            android:id="@+id/img_client"
+            android:src="@drawable/user_001"
+            android:layout_alignParentLeft="true"
+            />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_centerInParent="true"
+            android:layout_toRightOf="@id/img_client"
+            >
+
+            <TextView
+                android:id="@+id/txt_client1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:text="客户端名称:"
+                android:padding="5dp"
+                android:textSize="20dp"
+                android:textColor="@android:color/black"
+                />
+            <TextView
+                android:id="@+id/txt_client2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+
+                android:padding="5dp"
+                android:textSize="20dp"
+                android:textColor="@android:color/black"
+                />
+
+        </LinearLayout>
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_below="@id/client"
+        android:id="@+id/auth"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:background="@android:color/white"
+        android:layout_marginTop="15dp">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:padding="5dp"
+            android:src="@drawable/user_002"
+            android:id="@+id/img_auth"
+            android:layout_alignParentLeft="true"
+            />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:orientation="horizontal"
+            android:padding="5dp"
+            android:layout_toRightOf="@id/img_auth"
+            android:id="@+id/linearLayout">
+
+            <TextView
+                android:id="@+id/txt_auth1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:padding="5dp"
+                android:text="认证码:"
+                android:textSize="20dp"
+                android:textColor="@android:color/black"
+                />
+            <TextView
+                android:id="@+id/txt_auth2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:padding="5dp"
+
+                android:textSize="20dp"
+                android:textColor="@android:color/black"
+                />
+
+        </LinearLayout>
+
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_below="@id/auth"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:background="@android:color/white"
+        android:layout_marginTop="15dp">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="5dp"
+            android:id="@+id/linearLayoutLogout">
+            <Button
+                android:id="@+id/logout_btn"
+                android:layout_width="match_parent"
+                android:layout_height="45dp"
+                android:onClick="logoutBtnClick"
+                android:background="@android:color/transparent"
+                android:text="退出登录"
+                android:padding="5dp"
+                android:textSize="20dp"
+                android:textColor="#1E90FF"
+                />
+
+        </LinearLayout>
+
+    </RelativeLayout>
+
+    <com.aisino.trusthandwrite.custom.BottomMenuView
+        android:id="@+id/personal_bottom_bm"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true">
+    </com.aisino.trusthandwrite.custom.BottomMenuView>
+
+</RelativeLayout>
+
+
+
+
+
+

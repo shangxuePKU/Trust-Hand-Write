@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@drawable/login1_background"
+    android:gravity="center_horizontal">
+
+    <!-- 导航头-->
+    <com.aisino.trusthandwrite.custom.TopNavigationView
+        android:id="@+id/wt_navigation"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true">
+    </com.aisino.trusthandwrite.custom.TopNavigationView>
+
+    <ImageView
+        android:id="@+id/wt_title"
+        android:layout_width="wrap_content"
+        android:layout_height="45dp"
+        android:scaleType="fitStart"
+        android:src="@drawable/main6_001"
+        android:paddingTop="5dp"
+        android:layout_below="@id/wt_navigation"/>
+
+    <ListView
+        android:id="@+id/wt_lv"
+        android:descendantFocusability="afterDescendants"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="350dp"
+        android:padding="2dp"
+        android:textColor="@android:color/black"
+        android:layout_below="@+id/wt_title"
+        android:dividerHeight="10dp"
+        >
+    </ListView>
+
+    <Button
+        android:id="@+id/wt_backbtn"
+        android:layout_width="200dp"
+        android:layout_height="50dp"
+        android:layout_margin="30dp"
+        android:onClick="nextBtnClick"
+        android:text="下一步"
+        android:textSize="20sp"
+        android:textColor="@android:color/white"
+        android:background="@drawable/login1_008"
+        android:layout_below="@+id/wt_lv"
+        android:layout_centerHorizontal="true" />
+</RelativeLayout>
